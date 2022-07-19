@@ -28,21 +28,11 @@ jobs:
         npm install
         npm run build:webpack
      
-    - name: Copy files
-      uses: ulaval/azure-blob-copy-action@v1
+    - name: Copy import map.json
+      uses: canastro/copy-file-action@master
       with:
-        action: upload
-        connection_string: ${{ secrets.CONNECTION_STRING }}
-        container_name: $web
-        local_directory: importmap.json
-        http_headers: |
-          - glob: "**/*.????????.*"
-            headers:
-              Cache-Control: public, max-age=604800, immutable
-
-          - glob: "**/*"
-            headers:
-              Cache-Control: public, max-age=120, s-maxage=180, proxy-revalidate
+        source: importmap.json
+        target: dist/importmap.json
 
     - name: Copy files
       uses: ulaval/azure-blob-copy-action@v1
