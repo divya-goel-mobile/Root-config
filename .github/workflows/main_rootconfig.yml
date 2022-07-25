@@ -1,0 +1,51 @@
+# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
+# More GitHub Actions for Azure: https://github.com/Azure/actions
+
+# name: Build and deploy Node.js app to Azure Web App - AppHeader
+
+name: Deploy website
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+
+jobs:
+  build-and-deploy:
+    name: Build and deploy
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+      
+    - name: Install Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+      
+    - name: Build website
+      run: |
+        npm install
+        npm run build:webpack
+     
+    - name: Copy import map.json
+      uses: canastro/copy-file-action@master
+      with:
+        source: importmap.json
+        target: dist/importmap.json
+
+    - name: Copy files
+      uses: ulaval/azure-blob-copy-action@v1
+      with:
+        action: upload
+        connection_string: ${{ secrets.CONNECTION_STRING }}
+        container_name: $web
+        local_directory: dist
+        http_headers: |
+          - glob: "**/*.????????.*"
+            headers:
+              Cache-Control: public, max-age=604800, immutable
+
+          - glob: "**/*"
+            headers:
+              Cache-Control: public, max-age=120, s-maxage=180, proxy-revalidate
