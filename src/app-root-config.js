@@ -3,20 +3,24 @@ import { registerApplication, start } from "single-spa";
 registerApplication({
   name: "@app/AppHeader",
   app: () => System.import("@app/AppHeader"),
-  activeWhen: ["/home"],
+  activeWhen: [
+    (location) => location.pathname === "/" && location.pathname != "/products",
+  ],
 });
 
 registerApplication({
   name: "@app/AppFooter",
   app: () => System.import("@app/AppFooter"),
-  activeWhen: ["/home"],
+  activeWhen: [
+    (location) => location.pathname === "/" && location.pathname != "/products",
+  ],
 });
 
-registerApplication({
-  name: "@app/Home",
-  app: () => System.import("@app/Home"),
-  activeWhen: ["/home"],
-});
+// registerApplication({
+//   name: "@app/Home",
+//   app: () => System.import("@app/Home"),
+//   activeWhen: ["/home"],
+// });
 
 registerApplication({
   name: "@app/Products",
