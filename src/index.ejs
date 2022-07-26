@@ -55,7 +55,8 @@
         "@app/AppFooter": "//localhost:8081/app-AppFooter.js",
         "@app/appBanner": "//localhost:8082/app-appBanner.js",
         "@app/Home": "//localhost:8083/app-Home.js",
-        "@app/Products": "//localhost:8084/app-Products.js"
+        "@app/Products": "//localhost:8084/app-Products.js",
+        "@app/ProductDetail": "//localhost:8085/app-ProductDetail.js"
       }
     }
   </script>
@@ -83,15 +84,15 @@
   <script>
     System.import('@app/root-config');
     //System.import('@app/appBanner');
-
  </script>
   <main>
     <div class="header" id="single-spa-application:@app/AppHeader"></div>
-    <!-- <div class="home" id="single-spa-application:@app/Home"></div> -->
+    <div class="home" id="single-spa-application:@app/Home"></div>
     <div class="products" id="single-spa-application:@app/Products"></div>
     <footer class="bottom">
       <div class="footer" id="single-spa-application:@app/AppFooter"></div>
     </footer>
+
   </main> 
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
 </body>
