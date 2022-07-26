@@ -4,16 +4,16 @@ registerApplication({
   name: "@app/AppHeader",
   app: () => System.import("@app/AppHeader"),
   activeWhen: [
-    (location) => location.pathname === "/" || location.pathname != "/products",
+    (location) => {
+      return location.pathname.includes("/products") == false;
+    },
   ],
 });
 
 registerApplication({
   name: "@app/AppFooter",
   app: () => System.import("@app/AppFooter"),
-  activeWhen: [
-    (location) => location.pathname === "/home" && location.pathname != "/products",
-  ],
+  activeWhen: [(location) => location.pathname.includes("/products") == false],
 });
 
 registerApplication({
@@ -30,8 +30,7 @@ registerApplication({
 
 registerApplication({
   name: "@app/ProductDetail",
-  app: () =>
-    System.import("@app/ProductDetail"),
+  app: () => System.import("@app/ProductDetail"),
   activeWhen: ["/productDetail/:numberValue"],
 });
 
