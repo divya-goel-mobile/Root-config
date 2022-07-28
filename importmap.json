@@ -4,6 +4,9 @@
       "react": "https://cdn.jsdelivr.net/npm/react@16.13.1/umd/react.production.min.js",
       "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.production.min.js",
       "@app/AppHeader": "https://spacdnprudential.azureedge.net/react-header/app-AppHeader.js",
-      "@app/AppFooter": "https://spacdnprudential.azureedge.net/react-footer/app-AppFooter.js"
+      "@app/AppFooter": "https://spacdnprudential.azureedge.net/footer/app-AppFooter.js",
+      "@app/Products": "https://spacdnprudential.azureedge.net/product/app-Products.js",
+      "@app/Home": "https://spacdnprudential.azureedge.net/home/app-Home.js",
+     "@app/Career": "https://spacdnprudential.azureedge.net/career/app-Career.js"
     }
   }
