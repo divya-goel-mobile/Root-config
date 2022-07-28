@@ -58,7 +58,9 @@
         "@app/appBanner": "//localhost:8082/app-appBanner.js",
         "@app/Home": "//localhost:8083/app-Home.js",
         "@app/Products": "//localhost:8084/app-Products.js",
-        "@app/ProductDetail": "//localhost:8085/app-ProductDetail.js"
+        "@app/ProductDetail": "//localhost:8085/app-ProductDetail.js",
+        "@app/Career": "//localhost:8087/app-Career.js"
+
       }
     }
   </script>
@@ -88,13 +90,22 @@
     //System.import('@app/appBanner');
  </script>
   <main>
+    <single-spa-router mode="hash" base="/">
+
     <div class="header" id="single-spa-application:@app/AppHeader"></div>
+    <route path="/home">
     <div class="home" id="single-spa-application:@app/Home"></div>
+  </route>
+  <route path="/products">
+
     <div class="products" id="single-spa-application:@app/Products"></div>
+  </route>
+  <div class="career" id="single-spa-application:@app/Career"></div>
+
     <footer class="bottom">
       <div class="footer" id="single-spa-application:@app/AppFooter"></div>
     </footer>
-
+</single-spa-router>
   </main> 
   <import-map-overrides-full show-when-local-storage="devtools" dev-libs></import-map-overrides-full>
 </body>

@@ -33,7 +33,11 @@ registerApplication({
   app: () => System.import("@app/ProductDetail"),
   activeWhen: ["/productDetail/:numberValue"],
 });
-
+registerApplication({
+  name: "@app/Career",
+  app: () => System.import("@app/Career"),
+  activeWhen: ["/career", "/aboutUs" , "/joinWaitList"],
+});
 start({
   urlRerouteOnly: true,
 });
