@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Root Config</title>
+  <title>Prudential Health Insurance</title>
   <!--
     Remove this if you only support browsers that support async/await.
     This is needed by babel to share largeish helper code for compiling async/await in older
@@ -40,6 +40,11 @@
   <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" /> 
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;lang=en" />
+  <meta name="description" content="Prudentil Health Insurance"/>
+  <link rel="icon" type="image/png" href="./images/logo_prudential.png" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="apple-touch-icon" href="/images/logo_prudential.png" />
+  <link rel="manifest" href="/manifest.json" />
 
   
   <!-- Add your organization's prod import map URL to this script's src  -->
@@ -88,6 +93,13 @@
   <script>
     System.import('@app/root-config');
     //System.import('@app/appBanner');
+    if('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('./serviceworker.js')
+                    .then((reg) => console.log('Success: ', reg.scope))
+                    .catch((err) => console.log('Failure: ', err));
+            })
+        }
  </script>
   <main>
     <single-spa-router mode="hash" base="/">

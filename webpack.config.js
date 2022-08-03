@@ -30,6 +30,7 @@ module.exports = (webpackConfigEnv, argv) => {
         patterns: [
           { from: "importmap.json", to: "" },
           { from: "staticwebapp.config.json", to: "" },
+          { from: "./public", to: "" },
         ],
       }),
     ],
