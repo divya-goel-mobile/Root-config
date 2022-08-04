@@ -102,6 +102,16 @@
             })
         }
  </script>
+
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script>
+  window.OneSignal = window.OneSignal || [];
+  OneSignal.push(function() {
+    OneSignal.init({
+      appId: "91a097d4-4ae8-44f7-bf45-982b26121efb",
+    });
+  });
+  </script>
   <main>
     <single-spa-router mode="hash" base="/">
 
