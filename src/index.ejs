@@ -45,6 +45,7 @@
   <meta name="theme-color" content="#000000" />
   <link rel="apple-touch-icon" href="/images/logo_prudential.png" />
   <link rel="manifest" href="/manifest.json" />
+  <link rel="shortcut icon" type="image/png" href="/images/logo_prudential.png">
 
   
   <!-- Add your organization's prod import map URL to this script's src  -->
@@ -95,7 +96,7 @@
     //System.import('@app/appBanner');
     if('serviceWorker' in navigator) {
             window.addEventListener('load', () => {
-                navigator.serviceWorker.register('./serviceworker.js')
+                navigator.serviceWorker.register('/serviceworker.js')
                     .then((reg) => console.log('Success: ', reg.scope))
                     .catch((err) => console.log('Failure: ', err));
             })
