@@ -5,7 +5,10 @@ registerApplication({
   app: () => System.import("@app/AppHeader"),
   activeWhen: [
     (location) => {
-      return location.pathname.includes("/products") == false;
+      return (
+        location.pathname.includes("/products") == false &&
+        location.pathname.includes("/quote") == false
+      );
     },
   ],
 });
@@ -13,7 +16,12 @@ registerApplication({
 registerApplication({
   name: "@app/AppFooter",
   app: () => System.import("@app/AppFooter"),
-  activeWhen: [(location) => location.pathname.includes("/products") == false],
+  activeWhen: [
+    (location) =>
+      location.pathname.includes("/products") == false &&
+      location.pathname.includes("/Claims") == false &&
+      location.pathname.includes("/quote") == false,
+  ],
 });
 
 registerApplication({
@@ -29,14 +37,19 @@ registerApplication({
 });
 
 registerApplication({
-  name: "@app/ProductDetail",
-  app: () => System.import("@app/ProductDetail"),
-  activeWhen: ["/productDetail/:numberValue"],
+  name: "@pru/Claims",
+  app: () => System.import("@pru/Claims"),
+  activeWhen: ["/claims"],
 });
 registerApplication({
   name: "@app/Career",
   app: () => System.import("@app/Career"),
-  activeWhen: ["/career", "/aboutUs" , "/joinWaitList"],
+  activeWhen: ["/career", "/aboutUs", "/joinWaitList"],
+});
+registerApplication({
+  name: "@app/Quote",
+  app: () => System.import("@app/Quote"),
+  activeWhen: ["/quote"],
 });
 start({
   urlRerouteOnly: true,

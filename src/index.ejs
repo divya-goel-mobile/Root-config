@@ -64,9 +64,9 @@
         "@app/appBanner": "//localhost:8082/app-appBanner.js",
         "@app/Home": "//localhost:8083/app-Home.js",
         "@app/Products": "//localhost:8084/app-Products.js",
-        "@app/ProductDetail": "//localhost:8085/app-ProductDetail.js",
-        "@app/Career": "//localhost:8087/app-Career.js"
-
+        "@pru/Claims": "//localhost:8085/pru-Claims.js",
+        "@app/Career": "//localhost:8087/app-Career.js",
+        "@app/Quote": "//localhost:8088/app-Quote.js"
       }
     }
   </script>
@@ -119,9 +119,15 @@
     <route path="/home">
     <div class="home" id="single-spa-application:@app/Home"></div>
   </route>
-  <route path="/products">
+  <route path="/claims">
+    <div class="" id="single-spa-application:@app/Claims"></div>
 
+  </route>
+  <route path="/products">
     <div class="products" id="single-spa-application:@app/Products"></div>
+  </route>
+  <route path="/quote">
+    <div class="quote" id="single-spa-application:@app/Quote"></div>
   </route>
   <div class="career" id="single-spa-application:@app/Career"></div>
 

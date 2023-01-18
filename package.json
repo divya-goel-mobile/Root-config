@@ -9,15 +9,16 @@
     "prepare": "husky install",
     "build": "concurrently yarn:build:*",
     "build:webpack": "webpack --mode=production",
-    "start-all": "npm-run-all --parallel start appHeader appFooter appBanner home products",
+    "start-all": "npm-run-all --parallel start appHeader appFooter appBanner home products claims quote",
     "appHeader": "cd ../AppHeader && yarn start --port 8080",
     "appFooter": "cd ../AppFooter && yarn start --port 8081",
     "appBanner": "cd ../AppBanner && yarn start --port 8082",
     "home": "cd ../Home && yarn start --port 8083",
     "products": "cd ../Products && yarn start --port 8084",
-    "productsDetail": "cd ../ProductDetail && yarn start --port 8085",
+    "claims": "cd ../Claims && yarn start --port 8085",
     "utility": "cd ../utility && yarn start --port 8086",
-    "career": "cd ../Career && yarn start --port 8087"
+    "career": "cd ../Career && yarn start --port 8087",
+    "quote": "cd ../quote && yarn start --port 8088"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
