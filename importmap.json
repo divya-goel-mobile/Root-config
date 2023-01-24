@@ -7,6 +7,6 @@
     "@app/AppFooter": "https://storage.googleapis.com/prudentialsahi/footer/app-AppFooter.js",
     "@app/Products": "https://storage.googleapis.com/prudentialsahi/products/app-Products.js",
     "@app/Home": "https://storage.googleapis.com/prudentialsahi/home/app-Home.js",
-    "@app/Quote": "https://storage.googleapis.com/prudentialsahi/home/app-Quote.js"
+    "@app/Quote": "https://storage.googleapis.com/prudentialsahi/quote/app-Quote.js"
   }
 }
