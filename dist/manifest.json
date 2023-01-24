@@ -1,0 +1,49 @@
+{
+    "short_name": "PHI",
+    "name": "Prudential Health Insurance",
+    "description": "Prudential Health Insurance",
+    "shortcuts": [
+        {
+          "name": "View Home",
+          "short_name": "Home",
+          "description": "Welcome to prudential India",
+          "url": "/home",
+          "icons": [{ "src": "/images/home.png", "sizes": "750x750" }]
+        },
+        {
+          "name": "Products Journey",
+          "short_name": "Products",
+          "description": "View the list of products you need",
+          "url": "/products",
+          "icons": [{ "src": "/images/products.png", "sizes": "250x250" }]
+        }
+    ],
+    "icons": [
+        {
+            "src": "/images/logo_prudential.png",
+            "type": "image/png",
+            "sizes": "200x200"
+        },
+        {
+            "src": "/images/logo_840_602.png",
+            "type": "image/png",
+            "sizes": "840x602",
+            "purpose": "maskable"
+
+        },
+        {
+            "src": "/images/logo_192_192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "/images/logo_512_512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url": "/",
+    "display": "standalone",
+    "theme_color": "#000000",
+    "background_color": "#ffffff"
+}
