@@ -1,0 +1,12 @@
+{
+  "imports": {
+    "@app/root-config": "/app-root-config.js",
+    "react": "https://cdn.jsdelivr.net/npm/react@16.13.1/umd/react.production.min.js",
+    "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@16.13.1/umd/react-dom.production.min.js",
+    "@app/AppHeader": "https://storage.googleapis.com/prudentialsahi/header/app-AppHeader.js",
+    "@app/AppFooter": "https://storage.googleapis.com/prudentialsahi/footer/app-AppFooter.js",
+    "@app/Products": "https://storage.googleapis.com/prudentialsahi/products/app-Products.js",
+    "@app/Home": "https://storage.googleapis.com/prudentialsahi/home/app-Home.js",
+    "@app/Quote": "https://storage.googleapis.com/prudentialsahi/quote/app-Quote.js"
+  }
+}
